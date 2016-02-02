@@ -54,8 +54,7 @@ public class AbstractIPDriverConfigurationWizard extends AbstractConfigurationWi
     @Override
     public void createBindings() {
         IntegerConverter integerConverter = new IntegerConverter();
-        //TODO: this crashes
-        //addWrappedBinding(driver, "host", textFieldHost, "text");
-        //addWrappedBinding(driver, "port", textFieldPort, "text");
+        addWrappedBinding(driver, "host", textFieldHost, "text");
+        addWrappedBinding(driver, "port", textFieldPort, "text", integerConverter);
     }
 }
