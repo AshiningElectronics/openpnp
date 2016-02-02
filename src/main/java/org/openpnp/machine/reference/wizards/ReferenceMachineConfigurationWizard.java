@@ -15,6 +15,7 @@ import org.openpnp.machine.reference.driver.NullDriver;
 import org.openpnp.machine.reference.driver.SimulatorDriver;
 import org.openpnp.machine.reference.driver.SprinterDriver;
 import org.openpnp.machine.reference.driver.TinygDriver;
+import org.openpnp.machine.reference.driver.IPDriver;
 
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormLayout;
@@ -55,6 +56,7 @@ public class ReferenceMachineConfigurationWizard extends
         comboBoxDriver.addItem(OpenBuildsDriver.class.getCanonicalName());
         comboBoxDriver.addItem(org.firepick.driver.MarlinDriver.class.getCanonicalName());
         comboBoxDriver.addItem(org.firepick.driver.FireStepDriver.class.getCanonicalName());
+        comboBoxDriver.addItem(IPDriver.class.getCanonicalName());
         
         this.driverClassName = machine.getDriver().getClass().getCanonicalName();
     }
